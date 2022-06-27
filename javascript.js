@@ -44,12 +44,12 @@ function jump() {
 
 
 function control(e) {
-
-    if (e.key == "ArrowUp" || e.key == " ") {
+    console.log(e.key);
+    if (e.key == "touchstart" || e.key == " ") {
         jump();
     }
 }
-document.addEventListener('keydown', control);
+document.addEventListener('touchstart', control);
 
 
 // obstacle
