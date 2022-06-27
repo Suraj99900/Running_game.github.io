@@ -16,6 +16,7 @@ let uptime;
 let value = 0;
 let downTime;
 let score = document.getElementById("score");
+let click = document.getElementById("click");
 
 function jump() {
     if (isJupming) return;
@@ -48,10 +49,11 @@ function control(e) {
     if (e.key == "touchstart" || e.key == " " || e.key == "ArrowUp") {
         jump();
     }
+    jump();
 }
 document.addEventListener('touchstart', control);
 document.addEventListener('keydown', control);
-
+click.addEventListener("click",control);
 
 // obstacle
 let count = 0;
